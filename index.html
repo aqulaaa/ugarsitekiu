@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramus Mouse | Маркетплейс игровых мышек</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-section">
+                <a href="#" class="logo">
+                    <i class="fas fa-mouse-alt"></i>
+                    <span class="logo-text">Ramus<span class="logo-highlight">Mouse</span></span>
+                </a>
+                <p class="logo-tagline">Маркетплейс игровых девайсов</p>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#products" class="nav-link"><i class="fas fa-th-large"></i> Каталог</a></li>
+                    <li class="dropdown">
+                        <a href="#brands" class="nav-link"><i class="fas fa-tags"></i> Бренды <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#brands" data-brand="all">Все бренды</a>
+                            <a href="#brands" data-brand="razer">Razer</a>
+                            <a href="#brands" data-brand="logitech">Logitech</a>
+                            <a href="#brands" data-brand="steelseries">SteelSeries</a>
+                            <a href="#brands" data-brand="corsair">Corsair</a>
+                            <a href="#brands" data-brand="zowie">Zowie</a>
+                            <a href="#brands" data-brand="hyperx">HyperX</a>
+                            <a href="#brands" data-brand="glorious">Glorious</a>
+                        </div>
+                    </li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Поиск мышек...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="user-actions">
+                    <button class="icon-btn" id="user-btn" title="Войти">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="icon-btn cart-icon" id="cart-btn" title="Корзина">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                    <button class="icon-btn" id="theme-toggle" title="Сменить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <h3>Меню</h3>
+            <button class="close-mobile-menu" id="close-mobile-menu">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Главная</a>
+            <a href="#products" class="mobile-nav-link"><i class="fas fa-th-large"></i> Каталог</a>
+            <a href="#brands" class="mobile-nav-link"><i class="fas fa-tags"></i> Бренды</a>
+            <a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i> О нас</a>
+            <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Контакты</a>
+            <a href="#login" class="mobile-nav-link login-link"><i class="fas fa-sign-in-alt"></i> Войти</a>
+        </nav>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <!-- Герой секция -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Лучшие игровые мыши на <span class="highlight">Ramus Mouse</span></h1>
+                    <p class="hero-subtitle">Крупнейший маркетплейс игровых девайсов в СНГ. Более 500 моделей от ведущих брендов с гарантией и быстрой доставкой.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Моделей мышек</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Брендов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Довольных клиентов</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn-primary btn-large">Смотреть каталог <i class="fas fa-arrow-right"></i></a>
+                        <a href="#brands" class="btn btn-secondary btn-large">Выбрать по бренду</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-slider">
+                        <div class="slider-item active">
+                            <img src="https://avatars.mds.yandex.net/i?id=d9e016232e1023928cc96c608781c0dc_l-3600087-images-thumbs&n=13" alt="Игровая мышь Razer" class="slider-img">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://i.ytimg.com/vi/F9cQAfYKNno/maxresdefault.jpg" alt="Игровая мышь Logitech" class="slider-img">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://avatars.mds.yandex.net/get-mpic/1544149/img_id2866554377801271241.jpeg/orig" alt="Игровая мышь SteelSeries" class="slider-img">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" data-slide="0"></button>
+                        <button class="slider-btn" data-slide="1"></button>
+                        <button class="slider-btn" data-slide="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные бренды -->
+        <section class="brands-section" id="brands">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Популярные бренды</h2>
+                    <p class="section-subtitle">Выберите мышку от ведущих производителей игровой периферии</p>
+                </div>
+                <div class="brands-grid">
+                    <div class="brand-card" data-brand="razer">
+                        <div class="brand-logo">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <h3 class="brand-name">Razer</h3>
+                        <p class="brand-description">Лидер в производстве игровой периферии</p>
+                        <span class="brand-count">120 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="logitech">
+                        <div class="brand-logo">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="brand-name">Logitech</h3>
+                        <p class="brand-description">Беспроводные технологии и эргономика</p>
+                        <span class="brand-count">95 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="steelseries">
+                        <div class="brand-logo">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="brand-name">SteelSeries</h3>
+                        <p class="brand-description">Инновационные решения для киберспорта</p>
+                        <span class="brand-count">80 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="corsair">
+                        <div class="brand-logo">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h3 class="brand-name">Corsair</h3>
+                        <p class="brand-description">Высокая производительность и RGB</p>
+                        <span class="brand-count">65 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="zowie">
+                        <div class="brand-logo">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3 class="brand-name">Zowie</h3>
+                        <p class="brand-description">Профессиональные мыши для киберспорта</p>
+                        <span class="brand-count">45 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="hyperx">
+                        <div class="brand-logo">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="brand-name">HyperX</h3>
+                        <p class="brand-description">Надежность и комфорт для геймеров</p>
+                        <span class="brand-count">55 моделей</span>
+                    </div>
+                    <div class="brand-card" data-brand="glorious">
+                        <div class="brand-logo">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <h3 class="brand-name">Glorious</h3>
+                        <p class="brand-description">Ультралегкие мыши для соревнований</p>
+                        <span class="brand-count">40 моделей</span>
+                    </div>
+                    <div class="brand-card view-all">
+                        <div class="brand-logo">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <h3 class="brand-name">Все бренды</h3>
+                        <p class="brand-description">40+ производителей игровых мышек</p>
+                        <span class="brand-count">500+ моделей</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Каталог товаров -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Популярные модели</h2>
+                    <p class="section-subtitle">Самые продаваемые игровые мыши этого месяца</p>
+                </div>
+                
+                <div class="products-controls">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="razer">Razer</button>
+                        <button class="filter-btn" data-filter="logitech">Logitech</button>
+                        <button class="filter-btn" data-filter="steelseries">SteelSeries</button>
+                        <button class="filter-btn" data-filter="corsair">Corsair</button>
+                        <button class="filter-btn" data-filter="wireless">Беспроводные</button>
+                        <button class="filter-btn" data-filter="lightweight">Лёгкие</button>
+                    </div>
+                    
+                    <div class="sort-controls">
+                        <select id="sort-select">
+                            <option value="popular">По популярности</option>
+                            <option value="price-low">Сначала дешевые</option>
+                            <option value="price-high">Сначала дорогие</option>
+                            <option value="rating">По рейтингу</option>
+                            <option value="new">Новинки</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="products-grid">
+                    <!-- Товары будут вставлены через JavaScript -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="btn btn-secondary" id="load-more-btn">Показать еще 8 товаров</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- О нас -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Почему выбирают <span class="highlight">Ramus Mouse</span></h2>
+                        <p class="about-description">Мы - крупнейший маркетплейс игровых мышек в СНГ, объединяющий более 40 брендов и 500 моделей. Наша миссия - помочь каждому геймеру найти идеальную мышь для своих игровых потребностей.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="feature-title">Гарантия 2 года</h3>
+                                <p class="feature-description">На все товары предоставляется официальная гарантия производителя</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <h3 class="feature-title">Быстрая доставка</h3>
+                                <p class="feature-description">Доставка по всей России за 1-5 дней, в Москве и СПб - за 1 день</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <h3 class="feature-title">Поддержка 24/7</h3>
+                                <p class="feature-description">Круглосуточная техподдержка и консультации по выбору мыши</p>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-undo"></i>
+                                </div>
+                                <h3 class="feature-title">Возврат 30 дней</h3>
+                                <p class="feature-description">Возврат товара в течение 30 дней без объяснения причин</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=0f30249fc70e48f93a89846076d495ba_l-5425154-images-thumbs&n=13" alt="Геймер за игровым компьютером">
+                        <div class="image-badge">
+                            <div class="badge-content">
+                                <span class="badge-number">4.9/5</span>
+                                <span class="badge-text">Рейтинг на Яндекс.Маркете</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Отзывы покупателей</h2>
+                    <p class="section-subtitle">Что говорят геймеры о покупках в Ramus Mouse</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">
+                                <img src="https://sun9-40.userapi.com/s/v1/ig2/Tps0OcK-56wMGffg3davPVGyNJI2IRDsUFOmqkU6Gt1CajvoCyGJh0BOW8FtXXBmmiyMKCqrPx_-IQmGZCDLwPi8.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Аватар пользователя">
+                            </div>
+                            <div class="user-info">
+                                <h4 class="user-name">Камиль Л.</h4>
+                                <div class="user-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Больше в жизни не куплю. Но все равно 5 звезд. круто)0"</p>
+                        <div class="testimonial-footer">
+                            <span class="product-mention">Razer DeathAdder V3 Pro</span>
+                            <span class="testimonial-date">2 дня назад</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">
+                                <img src="https://sun9-53.userapi.com/s/v1/ig2/jqjBT3PaCGRnrECVYmOJDlW66zqDmfoy_1-IeIq_wlQeDuTz4dJJRNd1ZylRgz4Gh-Wk27pZzmXa0UnE0LzzZRqv.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Аватар пользователя">
+                            </div>
+                            <div class="user-info">
+                                <h4 class="user-name">Рамис Х.</h4>
+                                <div class="user-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Крутая мышь для доты, типо легкая. Главное не сломать"</p>
+                        <div class="testimonial-footer">
+                            <span class="product-mention">Logitech G Pro X Superlight</span>
+                            <span class="testimonial-date">5 дней назад</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">
+                                <img src="https://i.pinimg.com/736x/77/46/f9/7746f97076d0b6eea440df2ddeb2f4ee.jpg" alt="Аватар пользователя">
+                            </div>
+                            <div class="user-info">
+                                <h4 class="user-name">темный принц.</h4>
+                                <div class="user-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Для своего дела сойдет, лол"</p>
+                        <div class="testimonial-footer">
+                            <span class="product-mention">SteelSeries Aerox 5</span>
+                            <span class="testimonial-date">1 неделю назад</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-mouse-alt"></i>
+                        <span class="logo-text">Ramus<span class="logo-highlight">Mouse</span></span>
+                    </div>
+                    <p class="footer-description">Крупнейший маркетплейс игровых мышек в СНГ. Более 500 моделей от 40+ брендов с гарантией и быстрой доставкой.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Категории</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Все мышки</a></li>
+                        <li><a href="#brands">Беспроводные</a></li>
+                        <li><a href="#brands">Проводные</a></li>
+                        <li><a href="#brands">Для МОБА</a></li>
+                        <li><a href="#brands">Для шутеров</a></li>
+                        <li><a href="#brands">Лёгкие мыши</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Помощь</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия и возврат</a></li>
+                        <li><a href="#">Как выбрать мышь</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Отследить заказ</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>8 (800) 555-35-35</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ramusmouse.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Казань, ул. Москвоская, 42</span>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4 class="newsletter-title">Рассылка</h4>
+                        <p>Подпишитесь на новости о скидках и новинках</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Ваш email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                    <i class="fas fa-credit-card" title="Наличные"></i>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Ramus Mouse. Все права защищены.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    
+    <!-- Модальное окно корзины -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content cart-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Ваша корзина</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cart-items">
+                    <!-- Товары в корзине -->
+                </div>
+                <div class="cart-empty" id="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Корзина пуста</h3>
+                    <p>Добавьте товары из каталога</p>
+                    <a href="#products" class="btn btn-primary">Перейти в каталог</a>
+                </div>
+                <div class="cart-summary" id="cart-summary">
+                    <div class="summary-row">
+                        <span>Товаров:</span>
+                        <span id="cart-total-items">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Сумма:</span>
+                        <span id="cart-subtotal">0</span> руб.
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка:</span>
+                        <span id="cart-shipping">Бесплатно</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого:</span>
+                        <span id="cart-total">0</span> руб.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="continue-shopping">Продолжить покупки</button>
+                <button class="btn btn-primary" id="checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно входа/регистрации -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Вход</button>
+                    <button class="auth-tab" data-tab="register">Регистрация</button>
+                </div>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" required>
+                        <a href="#" class="forgot-password">Забыли пароль?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                    <div class="auth-divider">
+                        <span>или войти через</span>
+                    </div>
+                    <div class="social-auth">
+                        <button class="btn btn-social btn-vk">
+                            <i class="fab fa-vk"></i> ВКонтакте
+                        </button>
+                        <button class="btn btn-social btn-google">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                    </div>
+                </form>
+                
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Имя</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Пароль</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Подтвердите пароль</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="register-newsletter" checked>
+                        <label for="register-newsletter">Получать новости о скидках и новинках</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="register-terms" required>
+                        <label for="register-terms">Я согласен с <a href="#">правилами сайта</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно товара -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content product-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="product-modal-title"></h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="product-modal-body">
+                <!-- Контент будет добавлен через JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомления -->
+    <div class="notification-container" id="notification-container">
+        <!-- Уведомления будут добавляться через JS -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
